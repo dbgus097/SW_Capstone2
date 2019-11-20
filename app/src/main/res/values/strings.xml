@@ -1,0 +1,8 @@
+<resources>
+    <string name="ocr_result_tip">인식 결과는 여기에 나타납니다.</string>
+    <string name="icon1">나의 티켓</string>
+    <string name="icon2">새 티켓 등록</string>
+    <string name="icon3">통계</string>
+    <string name="icon4">설정</string>
+
+</resources>

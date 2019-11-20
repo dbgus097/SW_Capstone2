@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+
+    <org.opencv.android.JavaCameraView
+        android:id="@+id/activity_surface_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        />
+
+    <!--ROI 영역-->
+    <SurfaceView
+        android:id="@+id/surface_roi_border"
+        android:layout_width="0sp"
+        android:layout_height="0sp"
+        android:background="#00ff00" />
+
+    <SurfaceView
+        android:id="@+id/surface_roi"
+        android:layout_width="0sp"
+        android:layout_height="0sp"
+        android:background="#00ff0000" />
+
+
+    <!--Start 및 뒤로가기 버튼-->
+    <Button
+        android:id="@+id/btn_ocrstart"
+        android:layout_width="80sp"
+        android:layout_height="80sp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="10sp"
+        android:background="#7d010000"
+        android:onClick="onClickButton"
+        android:text="Start"
+        android:textColor="#ffffff"
+        android:textSize="15sp" />
+
+    <Button
+        android:id="@+id/btn_finish"
+        android:layout_width="40sp"
+        android:layout_height="40sp"
+        android:background="#7d010000"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="10sp"
+        android:layout_marginRight="10sp"
+        android:onClick="onClickButton"
+        android:text="←"
+        android:textColor="#ffffff"
+        android:textSize="20dp"
+        />
+
+    <!-- OCR 결과 및 캡쳐이미지 출력-->
+    <TextView
+        android:id="@+id/text_ocrresult"
+        android:layout_width="wrap_content"
+        android:layout_height="50sp"
+        android:layout_marginTop="15sp"
+        android:layout_marginLeft="15sp"
+        android:text="@string/ocr_result_tip"
+        android:textColor="@android:color/holo_red_dark"
+        android:textSize="20sp" />
+
+    <ImageView
+        android:id="@+id/image_capture"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        />
+
+
+</RelativeLayout>
